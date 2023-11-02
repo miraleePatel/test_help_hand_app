@@ -93,6 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller:authController.passController ,
                   imageName:Assets.iconsIconLock ,
                   hintText: "*******",
+                  obscureText: true,
                 ),
                 SizedBox(
                   height: 2.h,

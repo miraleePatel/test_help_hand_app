@@ -15,6 +15,7 @@ class CustomTextFormfieldWidget extends StatelessWidget {
   final TextInputType? keyboardType;
   final void Function()? onTap;
   final bool? readOnly;
+  final bool? obscureText;
   final void Function(String)? onChanged;
 
   const CustomTextFormfieldWidget(
@@ -26,7 +27,7 @@ class CustomTextFormfieldWidget extends StatelessWidget {
       this.width,
       this.padding,
       this.scale,
-      this.keyboardType,this.onTap,this.readOnly,this.onChanged});
+      this.keyboardType,this.onTap,this.readOnly,this.onChanged,this.obscureText});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +65,9 @@ class CustomTextFormfieldWidget extends StatelessWidget {
                   validator: validator,
                   onTap: onTap,
                   readOnly: readOnly ?? false,
+                  obscureText: obscureText ?? false,
                   onChanged:onChanged ,
+                 obscuringCharacter: '*',
                   scrollPhysics: NeverScrollableScrollPhysics(),
                   style:  GoogleFonts.openSans(
                       color: AppColors.blackColor,

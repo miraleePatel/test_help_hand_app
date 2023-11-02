@@ -19,7 +19,6 @@ class AgentViewScreen extends StatefulWidget {
 
 class _AgentViewScreenState extends State<AgentViewScreen> {
   AgentController agentController = Get.put(AgentController());
-
   int id = Get.arguments;
 
   @override
