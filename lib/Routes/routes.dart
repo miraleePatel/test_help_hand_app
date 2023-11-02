@@ -11,4 +11,5 @@ class Routes {
   static const String ALL_APPLICANT_DETAILS_SCREEN = '/all_applicant_details_screen';
   static const String AGENT_DETAILS_SCREEN = '/agent_details_screen';
   static const String ADD_MEMBER_SCREEN = '/add_member_screen';
+  static const String APPLICANT_SCREEN = '/applicant_screen';
 }

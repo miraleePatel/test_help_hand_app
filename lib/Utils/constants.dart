@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 
-
 const int ADMIN_HOME_INDEX = 0;
 const int LISTS_INDEX = 1;
 const int APPLICANT_INDEX = 2;
@@ -88,7 +87,8 @@ successSnackBar({String? title, String? message}) {
   );
 }
 
-/// information
+///
+/// Snackbar for showing information message
 ///
 
 informationSnackBar({String? title, String? message}) {

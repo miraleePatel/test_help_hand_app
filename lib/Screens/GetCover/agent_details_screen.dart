@@ -23,6 +23,8 @@ class _AgentDetailsScreenState extends State<AgentDetailsScreen> {
   TextEditingController agentCodeController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
+
+  /// Method for clear textfeild
   void clearField() {
     firstNameController.clear();
     lastNameController.clear();
@@ -55,11 +57,7 @@ class _AgentDetailsScreenState extends State<AgentDetailsScreen> {
               /// accept btn
               CustomButton(
                 onTap: () {
-                 /* if (formKey.currentState!.validate()) {
-                    Get.toNamed(Routes.APPLICANT_DETAILS_SCREEN)!
-                        .then((value) => clearField());
-                  }*/
-                  if(firstNameController.text.isEmpty){
+                if(firstNameController.text.isEmpty){
                     errorSnackBar(
                         message: 'Please Enter Your First Name');
                   }
@@ -93,6 +91,7 @@ class _AgentDetailsScreenState extends State<AgentDetailsScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  /// title
                   Center(
                       child: CustomWidgets.text("AGENT DETAILS",
                           color: AppColors.blueLinearColor2,
@@ -102,6 +101,7 @@ class _AgentDetailsScreenState extends State<AgentDetailsScreen> {
                   SizedBox(
                     height: 5.h,
                   ),
+                  /// FirstName
                   CustomWidgets.text("First Name *",
                       color: AppColors.textGreyColor,
                       textAlign: TextAlign.center,
@@ -115,6 +115,7 @@ class _AgentDetailsScreenState extends State<AgentDetailsScreen> {
                   SizedBox(
                     height: 2.h,
                   ),
+                  /// LastName
                   CustomWidgets.text("Last Name *",
                       color: AppColors.textGreyColor,
                       textAlign: TextAlign.center,
@@ -129,6 +130,7 @@ class _AgentDetailsScreenState extends State<AgentDetailsScreen> {
                   SizedBox(
                     height: 2.h,
                   ),
+                  /// AgentCode
                   CustomWidgets.text("Agent Code *",
                       color: AppColors.textGreyColor,
                       textAlign: TextAlign.center,

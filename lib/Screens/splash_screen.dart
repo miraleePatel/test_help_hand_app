@@ -1,14 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:help_hand_app/Routes/routes.dart';
-import 'package:help_hand_app/Widgets/custom_widget.dart';
 import 'package:help_hand_app/generated/assets.dart';
 import 'package:sizer/sizer.dart';
-
-import '../Models/login_model.dart';
 import '../Utils/app_colors.dart';
 import '../Utils/string_constant.dart';
 import '../Widgets/custom_button.dart';
@@ -26,12 +21,13 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Spacer(),
-
+          /// logo
           Center(child: Image.asset(Assets.imagesLogo,scale: 2.5,)),
           SizedBox(height: 10.h,),
+          /// Get cover section
           CustomButton(
             onTap: (){
               Get.toNamed(Routes.TERMS_CONDITION_SCREEN);
@@ -41,9 +37,9 @@ class _SplashScreenState extends State<SplashScreen> {
             text:"GET COVER" ,
           ),
           SizedBox(height: 3.h,),
+          /// admin login section
           CustomButton(
             onTap: (){
-
               if (GetStorage().read(authToken) != null) {
                 Get.offAllNamed(Routes.DASHBOARD_SCREEN);
               }else{

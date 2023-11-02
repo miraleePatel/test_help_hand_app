@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-
-import '../../Routes/routes.dart';
 import '../../Utils/app_colors.dart';
 import '../../Widgets/custom_button.dart';
 import '../../Widgets/custom_widget.dart';
@@ -54,6 +51,7 @@ class _AllApplicantDetailsScreenState extends State<AllApplicantDetailsScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              /// title
               Center(
                   child: CustomWidgets.text("QUOTE SUMMARY",
                       color: AppColors.blueLinearColor2,
@@ -126,7 +124,7 @@ class _AllApplicantDetailsScreenState extends State<AllApplicantDetailsScreen> {
                     ),
 
                     SizedBox(
-                      height: 8.h,
+                      height: 5.h,
                     ),
 
 

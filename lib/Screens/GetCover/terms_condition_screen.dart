@@ -16,10 +16,9 @@ class TermsConditionScreen extends StatefulWidget {
 }
 
 class _TermsConditionScreenState extends State<TermsConditionScreen> {
-
-
+  /// if you DECLINE. It will display message you can’t continue and app closes.
   void showSnackbarAndCloseApp(BuildContext context) {
-    informationSnackBar(message:'You can\'t continue. The app will close.' );
+    informationSnackBar(message: 'You can\'t continue. The app will close.');
     // Close the app after a delay (e.g., 2 seconds).
     Future.delayed(Duration(seconds: 4), () {
       SystemNavigator.pop();
@@ -40,8 +39,7 @@ class _TermsConditionScreenState extends State<TermsConditionScreen> {
             /// decline btn
             CustomBorderButton(
               onTap: () {
-                               showSnackbarAndCloseApp(context);
-
+                showSnackbarAndCloseApp(context);
               },
               text: "DECLINE",
             ),
@@ -56,13 +54,14 @@ class _TermsConditionScreenState extends State<TermsConditionScreen> {
               text: "ACCEPT",
             ),
           ],
-          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, top: 80),
         child: SingleChildScrollView(
           child: Column(
             children: [
+              /// title
               Center(
                   child: CustomWidgets.text(
                       "Just before we continue, please read and accept the disclaimer",
@@ -73,6 +72,7 @@ class _TermsConditionScreenState extends State<TermsConditionScreen> {
               SizedBox(
                 height: 2.h,
               ),
+              /// description
               Center(
                   child: CustomWidgets.text(text,
                       color: AppColors.blackColor,
@@ -87,8 +87,6 @@ class _TermsConditionScreenState extends State<TermsConditionScreen> {
       ),
     );
   }
-
-
 }
 
 String text =

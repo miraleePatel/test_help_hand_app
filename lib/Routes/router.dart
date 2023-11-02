@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:help_hand_app/Screens/Admin/admin_home_screen.dart';
 import 'package:help_hand_app/Screens/Admin/agent_list_screen.dart';
 import 'package:help_hand_app/Screens/Admin/agent_view_screen.dart';
+import 'package:help_hand_app/Screens/Admin/applicant_screen.dart';
 import 'package:help_hand_app/Screens/Admin/dashboard_screen.dart';
 import 'package:help_hand_app/Screens/GetCover/add_member_screen.dart';
 import 'package:help_hand_app/Screens/GetCover/agent_details_screen.dart';
@@ -56,6 +57,9 @@ class AppPages {
     ),GetPage(
       name: Routes.ADD_MEMBER_SCREEN,
       page: () => const AddMemberScreen(),
+    ),GetPage(
+      name: Routes.APPLICANT_SCREEN,
+      page: () => const ApplicantScreen(),
     ),
 
 

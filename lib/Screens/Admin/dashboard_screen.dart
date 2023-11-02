@@ -4,6 +4,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:help_hand_app/Screens/Admin/admin_home_screen.dart';
 import 'package:help_hand_app/Screens/Admin/agent_list_screen.dart';
 import 'package:help_hand_app/Screens/Admin/agent_view_screen.dart';
+import 'package:help_hand_app/Screens/Admin/applicant_screen.dart';
 import 'package:help_hand_app/Utils/app_colors.dart';
 import 'package:help_hand_app/Utils/string_constant.dart';
 import 'package:help_hand_app/Widgets/custom_widget.dart';
@@ -162,8 +163,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           GestureDetector(
               onTap: () async {
                 await GetStorage().erase().then((value) =>  Get.offAllNamed(Routes.SPLASH_SCREEN));
-
-
               },
               child: Image.asset(
                 Assets.iconsIconLogout,
@@ -190,7 +189,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       case LISTS_INDEX:
         return AgentListScreen();
       case APPLICANT_INDEX:
-        return AgentViewScreen();
+        return ApplicantScreen();
       default:
     }
   }

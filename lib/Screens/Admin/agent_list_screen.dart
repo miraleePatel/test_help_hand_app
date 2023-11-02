@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:help_hand_app/Routes/routes.dart';
 import 'package:sizer/sizer.dart';
 import '../../Controller/agent_controller.dart';
 import '../../Controller/dashboard_controller.dart';
@@ -130,6 +131,7 @@ class _AgentListScreenState extends State<AgentListScreen> {
 
                     child: GestureDetector(
                       onTap: (){
+                        Get.toNamed(Routes.AGENT_VIEW_SCREEN,arguments:agentController.agentList[index].id );
                          },
                       child: Container(
                           height: 40.0,

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  //#440C17
-
 
   static const whiteColor = Color(0xffFFFFFF);
   static const blackColor = Color(0xff000000);
@@ -15,10 +13,5 @@ class AppColors {
   static const testFeildBg = Color(0xffE8F0FE);
   static const drawerUnSelect = Color(0xffEDEDED);
   static const hintText = Color(0xff2A2D30);
-
-
-
-
-  // set system primary color
 
 }
