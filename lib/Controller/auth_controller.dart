@@ -8,8 +8,8 @@ import '../Routes/routes.dart';
 import '../Utils/constants.dart';
 
 class AuthController extends GetxController{
-  TextEditingController emailController = TextEditingController(text: "myadmin@test.com");
-  TextEditingController passController = TextEditingController(text: "123456789");
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passController = TextEditingController();
   final authRepository = AuthRepository(APIManager());
 
   clearData(){
